@@ -55,6 +55,8 @@ b' = 12. c = (121 ⋅ 4) mod 497 = 484 mod 497 = 484.
 
 b' = 13. c = (484 ⋅ 4) mod 497 = 1936 mod 497 = 445.
 
+The final answer for c is therefore 445.
+
 # Assignment
 
 Your assignment is to implement the modular exponentiation algorithm given above. Use the following test data.
