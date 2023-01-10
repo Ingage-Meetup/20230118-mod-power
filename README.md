@@ -8,8 +8,8 @@ The naive solution to compute this value is to compute ab, take that value mod n
 
 To come up with a more reasonable solution, we make a couple of observations.
 
-The final value will always be less than n, due to the property of the modulus.
-A property of modulus is that the following identity is true:
+- The final value will always be less than n, due to the property of the modulus.
+- A property of modulus is that the following identity is true:
 
 ab mod n = (a mod n)(b mod n) mod n
 
