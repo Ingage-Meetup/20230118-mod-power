@@ -28,6 +28,7 @@ These observations suggest the following algorithm and example (both taken from 
 4. If b′ < b, go to step 2. Else, c contains the correct solution to c ≡ ab (mod n).
 
 The example a = 4, b = 13, and n = 497 is presented again. The algorithm passes through step 3 thirteen times:
+
 b' = 1. c = (1 ⋅ 4) mod 497 = 4 mod 497 = 4.
 b' = 2. c = (4 ⋅ 4) mod 497 = 16 mod 497 = 16.
 b' = 3. c = (16 ⋅ 4) mod 497 = 64 mod 497 = 64.
