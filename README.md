@@ -30,17 +30,29 @@ These observations suggest the following algorithm and example (both taken from 
 The example a = 4, b = 13, and n = 497 is presented again. The algorithm passes through step 3 thirteen times:
 
 b' = 1. c = (1 ⋅ 4) mod 497 = 4 mod 497 = 4.
+
 b' = 2. c = (4 ⋅ 4) mod 497 = 16 mod 497 = 16.
+
 b' = 3. c = (16 ⋅ 4) mod 497 = 64 mod 497 = 64.
+
 b' = 4. c = (64 ⋅ 4) mod 497 = 256 mod 497 = 256.
+
 b' = 5. c = (256 ⋅ 4) mod 497 = 1024 mod 497 = 30.
+
 b' = 6. c = (30 ⋅ 4) mod 497 = 120 mod 497 = 120.
+
 b' = 7. c = (120 ⋅ 4) mod 497 = 480 mod 497 = 480.
+
 b' = 8. c = (480 ⋅ 4) mod 497 = 1920 mod 497 = 429.
+
 b' = 9. c = (429 ⋅ 4) mod 497 = 1716 mod 497 = 225.
+
 b' = 10. c = (225 ⋅ 4) mod 497 = 900 mod 497 = 403.
+
 b' = 11. c = (403 ⋅ 4) mod 497 = 1612 mod 497 = 121.
+
 b' = 12. c = (121 ⋅ 4) mod 497 = 484 mod 497 = 484.
+
 b' = 13. c = (484 ⋅ 4) mod 497 = 1936 mod 497 = 445.
 
 # Assignment
