@@ -22,10 +22,10 @@ We can further reduce the problem by successively factoring out a:
 
 These observations suggest the following algorithm and example (both taken from Wikipedia)
 
-Set c = 1, b′ = 0.
-Increase e′ by 1.
-Set c = (a ⋅ c) mod n.
-If b′ < b, go to step 2. Else, c contains the correct solution to c ≡ ab (mod n).
+1. Set c = 1, b′ = 0.
+2. Increase e′ by 1.
+3. Set c = (a ⋅ c) mod n.
+4. If b′ < b, go to step 2. Else, c contains the correct solution to c ≡ ab (mod n).
 
 The example a = 4, b = 13, and n = 497 is presented again. The algorithm passes through step 3 thirteen times:
 b' = 1. c = (1 ⋅ 4) mod 497 = 4 mod 497 = 4.
@@ -42,7 +42,7 @@ b' = 11. c = (403 ⋅ 4) mod 497 = 1612 mod 497 = 121.
 b' = 12. c = (121 ⋅ 4) mod 497 = 484 mod 497 = 484.
 b' = 13. c = (484 ⋅ 4) mod 497 = 1936 mod 497 = 445.
 
-Assignment
+# Assignment
 
 Your assignment is to implement the modular exponentiation algorithm given above. Use the following test data.
 
