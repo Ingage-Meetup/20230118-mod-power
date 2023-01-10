@@ -59,7 +59,7 @@ The final answer for c is therefore 445.
 
 # Assignment
 
-Your assignment is to implement the modular exponentiation algorithm given above. Use the following test data.
+1. Your assignment is to implement the modular exponentiation algorithm given above. Use the following test data.
 
 a = 4, b = 13, and n = 497 (c = 445)
 
@@ -80,10 +80,8 @@ n = 1095739848401223530161382030331916535350776424648212970492881299350789366547
 
 c = 283237912501648954965202330011994399969716991786816781338682574487609724556521531521606983588567976
 
-
-
  
-Instrument your code so that you can answer the following questions for each test input.
+2. Instrument your code so that you can answer the following questions for each test input.
 
 How many multiplications does the algorithm perform?
 
@@ -91,18 +89,6 @@ How many multiplications does the algorithm perform?
 How much space does the algorithm use?
 
 If you have time, implement the naive algorithm (compute ab mod n directly and answer the same questions.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
