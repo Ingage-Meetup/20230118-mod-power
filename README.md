@@ -1,4 +1,4 @@
-#Modular Exponentiation
+# Modular Exponentiation
 
 Many of our most important cryptographic algorithm, such as RSA public key encryption and the Diffie-Hellman Key Exchange Protocol, require that we compute the following:
 
