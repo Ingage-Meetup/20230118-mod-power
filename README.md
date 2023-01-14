@@ -4,56 +4,56 @@ Many of our most important cryptographic algorithms, such as RSA public key encr
 
 a<sup>b</sup> mod n
 
-The naive solution to compute this value is to compute ab, take that value mod n, and you’re done. However, in practice, a and b can be on the order of 100 decimal digits, so to compute ab will not only require a very long time to compute (due to the massive number of multiplications needed), but the final answer will be so large that it will overflow on most machines. 
+The naive solution to compute this value is to compute a<sup>b</sup>, take that value mod n, and you’re done. However, in practice, a and b can be on the order of 100 decimal digits, so to compute a<sup>b</sup> will not only require a very long time to compute (due to the massive number of multiplications needed), but the final answer will be so large that it will overflow on most machines. 
 
 To come up with a more reasonable solution, we make a couple of observations.
 
 - The final value will always be less than n, due to the property of the modulus.
 - A property of modulus is that the following identity is true:
 
-ab mod n = (a mod n)(b mod n) mod n
+	xy mod n = (x mod n)(y mod n) mod n
 
 
-Using observation #2, we can rewrite ab mod n as (a1 mod n)(a(b-1) mod n) mod n.
+Using observation #2, we can rewrite a<sup>b</sup> mod n as (a mod n)(a<sup>(b-1)</sup> mod n) mod n.
 
 We can further reduce the problem by successively factoring out a:
 
-	(a1 mod n)(a1 mod n)(a(b-2) mod n) mod n
+	(a mod n)(a mod n)(a<sup>(b-2)</sup> mod n) mod n
 
 These observations suggest the following algorithm and example (both taken from Wikipedia)
 
-1. Set c = 1, b′ = 0.
-2. Increase e′ by 1.
+1. Set c = 1, d = 0. (d is just a counter)
+2. Increase d by 1.
 3. Set c = (a ⋅ c) mod n.
-4. If b′ < b, go to step 2. Else, c contains the correct solution to c ≡ ab (mod n).
+4. If d < b, go to step 2. Else, c contains the correct solution to c ≡ a<sup>b</sup> (mod n).
 
 The example a = 4, b = 13, and n = 497 is presented again. The algorithm passes through step 3 thirteen times:
 
-b' = 1. c = (1 ⋅ 4) mod 497 = 4 mod 497 = 4.
+d = 1. c = (1 ⋅ 4) mod 497 = 4 mod 497 = 4.
 
-b' = 2. c = (4 ⋅ 4) mod 497 = 16 mod 497 = 16.
+d = 2. c = (4 ⋅ 4) mod 497 = 16 mod 497 = 16.
 
-b' = 3. c = (16 ⋅ 4) mod 497 = 64 mod 497 = 64.
+d = 3. c = (16 ⋅ 4) mod 497 = 64 mod 497 = 64.
 
-b' = 4. c = (64 ⋅ 4) mod 497 = 256 mod 497 = 256.
+d = 4. c = (64 ⋅ 4) mod 497 = 256 mod 497 = 256.
 
-b' = 5. c = (256 ⋅ 4) mod 497 = 1024 mod 497 = 30.
+d = 5. c = (256 ⋅ 4) mod 497 = 1024 mod 497 = 30.
 
-b' = 6. c = (30 ⋅ 4) mod 497 = 120 mod 497 = 120.
+d = 6. c = (30 ⋅ 4) mod 497 = 120 mod 497 = 120.
 
-b' = 7. c = (120 ⋅ 4) mod 497 = 480 mod 497 = 480.
+d = 7. c = (120 ⋅ 4) mod 497 = 480 mod 497 = 480.
 
-b' = 8. c = (480 ⋅ 4) mod 497 = 1920 mod 497 = 429.
+d = 8. c = (480 ⋅ 4) mod 497 = 1920 mod 497 = 429.
 
-b' = 9. c = (429 ⋅ 4) mod 497 = 1716 mod 497 = 225.
+d = 9. c = (429 ⋅ 4) mod 497 = 1716 mod 497 = 225.
 
-b' = 10. c = (225 ⋅ 4) mod 497 = 900 mod 497 = 403.
+d = 10. c = (225 ⋅ 4) mod 497 = 900 mod 497 = 403.
 
-b' = 11. c = (403 ⋅ 4) mod 497 = 1612 mod 497 = 121.
+d = 11. c = (403 ⋅ 4) mod 497 = 1612 mod 497 = 121.
 
-b' = 12. c = (121 ⋅ 4) mod 497 = 484 mod 497 = 484.
+d = 12. c = (121 ⋅ 4) mod 497 = 484 mod 497 = 484.
 
-b' = 13. c = (484 ⋅ 4) mod 497 = 1936 mod 497 = 445.
+d = 13. c = (484 ⋅ 4) mod 497 = 1936 mod 497 = 445.
 
 The final answer for c is therefore 445.
 
@@ -88,7 +88,7 @@ The final answer for c is therefore 445.
 
     How much space does the algorithm use?
 
-    If you have time, implement the naive algorithm (compute ab mod n directly and answer the same questions.
+    If you have time, implement the naive algorithm (compute a<sup>b</sup> mod n directly and answer the same questions.
 
 
 
