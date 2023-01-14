@@ -1,8 +1,8 @@
 # Modular Exponentiation
 
-Many of our most important cryptographic algorithm, such as RSA public key encryption and the Diffie-Hellman Key Exchange Protocol, require that we compute the following:
+Many of our most important cryptographic algorithms, such as RSA public key encryption and the Diffie-Hellman Key Exchange Protocol, require that we compute the following:
 
-ab mod n
+a<sup>b</sup> mod n
 
 The naive solution to compute this value is to compute ab, take that value mod n, and you’re done. However, in practice, a and b can be on the order of 100 decimal digits, so to compute ab will not only require a very long time to compute (due to the massive number of multiplications needed), but the final answer will be so large that it will overflow on most machines. 
 
