@@ -81,16 +81,11 @@ The final answer for c is therefore 445.
     c = 283237912501648954965202330011994399969716991786816781338682574487609724556521531521606983588567976
 
  
-2. Instrument your code so that you can answer the following questions for each test input.
+2. Implement the naive algorithm.
 
-    How many multiplications does the algorithm perform?
+3. Instrument both implementation to measure the execution time of each.
 
-
-    How much space does the algorithm use?
-
-    If you have time, implement the naive algorithm (compute a<sup>b</sup> mod n directly and answer the same questions.
-
-
+4. Which algorithm is faster? 
 
 
 
