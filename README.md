@@ -20,6 +20,8 @@ We can further reduce the problem by successively factoring out a:
 
 	(a mod n)(a mod n)(a<sup>(b-2)</sup> mod n) mod n
 
+We can further decompose the expression so that it is a succession of (a mod n) (a mod n) ... (a mod n) with b factors.
+
 These observations suggest the following algorithm and example (both taken from Wikipedia)
 
 1. Set c = 1, d = 0. (d is just a counter)
