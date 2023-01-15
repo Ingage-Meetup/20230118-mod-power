@@ -85,7 +85,7 @@ The final answer for c is therefore 445.
  
 2. Implement the naive algorithm.
 
-3. Instrument both implementation to measure the execution time of each.
+3. Instrument both implementations to measure the execution time of each.
 
 4. Which algorithm is faster? 
 
