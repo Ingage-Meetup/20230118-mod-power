@@ -61,7 +61,7 @@ The final answer for c is therefore 445.
 
 # Assignment
 
-1. Your assignment is to implement the modular exponentiation algorithm given above. Use the following test data.
+1. Implement the modular exponentiation algorithm given above. Use the following test data.
 
     a = 4, b = 13, and n = 497 (c = 445)
 
