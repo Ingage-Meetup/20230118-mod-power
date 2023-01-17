@@ -11,14 +11,14 @@ To come up with a more reasonable solution, we make a couple of observations.
 - The final value will always be less than n, due to the property of the modulus.
 - A property of modulus is that the following identity is true:
 
-	xy mod n = (x mod n)(y mod n) mod n
+    xy mod n = (x mod n)(y mod n) mod n
 
 
 Using observation #2, we can rewrite a<sup>b</sup> mod n as (a mod n)(a<sup>(b-1)</sup> mod n) mod n.
 
 We can further reduce the problem by successively factoring out a:
 
-	(a mod n)(a mod n)(a<sup>(b-2)</sup> mod n) mod n
+   (a mod n)(a mod n)(a<sup>(b-2)</sup> mod n) mod n
 
 We can further decompose the expression so that it is a succession of (a mod n) (a mod n) ... (a mod n) with b factors.
 
