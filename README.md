@@ -18,7 +18,7 @@ Using observation #2, we can rewrite a<sup>b</sup> mod n as (a mod n)(a<sup>(b-1
 
 We can further reduce the problem by successively factoring out a:
 
-(a mod n)(a mod n)(a<sup>(b-2)</sup> mod n) mod n
+	(a mod n)(a mod n)(a<sup>(b-2)</sup> mod n) mod n
 
 We can further decompose the expression so that it is a succession of (a mod n) (a mod n) ... (a mod n) with b factors.
 
