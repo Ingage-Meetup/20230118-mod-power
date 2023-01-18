@@ -4,7 +4,7 @@ Many of our most important cryptographic algorithms, such as RSA public key encr
 
 a<sup>b</sup> mod n
 
-The naive solution to compute this value is to compute a<sup>b</sup>, take that value mod n, and you’re done. However, in practice, a and b can be on the order of 100 decimal digits, so to compute a<sup>b</sup> will not only require a very long time to compute (due to the massive number of multiplications needed), but the final answer will be so large that it will overflow on most machines. 
+The naive solution to compute this value is to compute a<sup>b</sup>, take that value mod n, and you’re done. However, in practice, a and b can be quite large, so to compute a<sup>b</sup> will not only require a very long time to compute (due to the massive number of multiplications needed), but the final answer will be so large that it will overflow on most machines. 
 
 To come up with a more reasonable solution, we make a couple of observations.
 
